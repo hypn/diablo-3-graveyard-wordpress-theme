@@ -134,6 +134,22 @@ position:relative;
 z-index:1;
 }
 
+.header .subtitle {
+color:#fff;
+font-family: 'IM Fell DW Pica', serif;
+font-size:24px;
+font-style:italic;
+letter-spacing:3px;
+position:absolute;
+text-shadow: 1px 1px 10px #000;
+top:200px;
+width:100%;
+}
+
+.header .subtitle div {
+text-align:center;
+}
+
 .cap {
 clear:both;
 margin:0 0 20px 20px;

@@ -4,14 +4,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php bloginfo('name');?><?php wp_title(" - ",true); ?></title>
 <link href="<?php echo bloginfo('stylesheet_url');?>" rel="stylesheet" type="text/css" />
-<link href='http://fonts.googleapis.com/css?family=IM+Fell+DW+Pica|UnifrakturCook:700' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=IM+Fell+DW+Pica:400,400italic' rel='stylesheet' type='text/css' />
 </head>
 
 <body>
 <div class="container">
 
 	<div class="header">
-    
+    	
+        <div class="subtitle"><div><?php bloginfo('description');?></div></div>
     	<img src="<?php echo bloginfo('template_directory');?>/images/logo.png" height="364" width="600" alt="diablo 3 wordpress theme logo" />
     
     </div>
