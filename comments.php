@@ -19,9 +19,12 @@ $default_avatar = get_bloginfo('template_directory').'/images/avatar.jpg';
 <?php endif; ?> 
 
 <?php if(comments_open()) : ?>
-	<h2>Add Your Comment</h2>
+	<h2><?php comment_form_title( 'Leave a Reply', 'Leave a Reply to %s' ); ?></h2>
+    <div id="cancel-comment-reply"><small><?php cancel_comment_reply_link() ?></small></div>
+    <?php comment_id_fields(); ?>
     <?php if(get_option('comment_registration') && !$user_ID) : ?>  
         <p>You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>">logged in</a> to post a comment.</p><?php else : ?>  
+        <div id="respond">
         <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">  
             <?php if($user_ID) : ?>  
                 <p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="Log out of this account">Log out &raquo;</a></p>  
@@ -38,6 +41,7 @@ $default_avatar = get_bloginfo('template_directory').'/images/avatar.jpg';
             <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" /></p>
             <?php do_action('comment_form', $post->ID); ?>  
         </form>  
+        </div>
     <?php endif; ?>  
 <?php else : ?>  
     <p>The comments are closed.</p>  

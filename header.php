@@ -1,13 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="<?php bloginfo('charset'); ?>" />
 <title><?php bloginfo('name');?><?php wp_title(" - ",true); ?></title>
-<link href="<?php echo bloginfo('stylesheet_url');?>" rel="stylesheet" type="text/css" />
-<link href='http://fonts.googleapis.com/css?family=IM+Fell+DW+Pica:400,400italic' rel='stylesheet' type='text/css' />
+<link href="<?php echo get_stylesheet_uri();?>" rel="stylesheet" type="text/css" />
+<?php
+if (is_singular()) wp_enqueue_script( 'comment-reply' );
+wp_head();
+?>
 </head>
 
-<body>
+<body <?php body_class();?>>
 <div class="container">
 
 	<div class="header">
@@ -34,5 +37,5 @@
 						'link_before' => '',
 						'link_after'  => '' );
 					wp_page_menu($args); ?>
-                    <div class="search"><form action="" method="get"><input type="text" name="s" class="search right query" /><input type="submit" class="search-button" value="" /></form></div>
+                    <div class="search"><?php get_search_form( $echo ); ?></div>
                 </div>

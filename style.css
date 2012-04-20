@@ -1,8 +1,8 @@
 /*
 
-Theme Name: Diablo 3 Graveyard Wordpress Theme
+Theme Name: Diablo 3 Graveyard
 Theme URI: http://zacvineyard.com/d3
-Description: A Wordpress theme based on the game Diablo 3. 
+Description: A WordPress theme based on the game Diablo 3. 
 Author: Zac Vineyard
 Author URI: http://zacvineyard.com
 Version: 1.0
@@ -11,7 +11,7 @@ Tags: black, orange, red, white, two-columns, fixed-width
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-NOTE: Many of the images in this theme were either part of the Diable 3 fankit or exist as images on the current Diablo 3 community site at http://www.blizzard.com/diablo3. Many thanks to the designers who work hard to produce such quality work.
+NOTE: Many of the images in this theme were either part of the Diablo 3 fankit or exist as images on the current Diablo 3 community site at http://www.blizzard.com/diablo3. Many thanks to the designers who work hard to produce such quality work.
 
 */
 
@@ -163,6 +163,10 @@ height:0;
 .content {
 position:relative;
 z-index:2;
+}
+
+.hidden {
+display:none;
 }
 
 img {
@@ -442,4 +446,20 @@ border:2px solid #000;
 textarea {
 height:200px;
 width:536px;
+}
+
+.wp-caption, .wp-caption-text, .gallery-caption {
+font-size:11px;
+font-style:italic;
+color:#999;
+}
+
+.sticky {
+background-color:#000000;
+background-image:none;
+border-radius:3px;
+padding:10px;
+}
+
+.bypostauthor {
 }
