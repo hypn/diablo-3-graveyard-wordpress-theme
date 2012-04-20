@@ -274,7 +274,6 @@ background:url('images/arrows.gif') no-repeat 10px -86px;
 }
 
 .navigation {
-border-top:1px solid #000;
 margin:0 40px;
 padding:20px 0;
 }
@@ -345,7 +344,7 @@ padding:0 0 10px 20px;
 }
 
 .post {
-background:#12110f url('images/news-bg.jpg') no-repeat center top;
+background:url('images/news-bg.jpg') no-repeat center top;
 margin-left:5px;
 }
 
