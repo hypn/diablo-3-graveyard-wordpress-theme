@@ -296,13 +296,9 @@ z-index:1;
 }
 
 .primary blockquote {
-border-left:1px dotted #fff;
-float:right;
-font-family: 'IM Fell DW Pica', serif;
-font-size:24px;
-margin:4px 0 15px 25px;
-padding:15px 0 0 15px;
-width:50%;
+border-left: 1px dotted #FFFFFF;
+margin: 0 10px;
+padding: 0 10px;
 }
 
 .primary .comment_stream ul, .primary .comment_stream ol {
